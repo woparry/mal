@@ -84,8 +84,8 @@ DOCKERIZE =
 # Implementation specific settings
 #
 
-IMPLS = ada ada.2 awk bash basic c chuck clojure coffee common-lisp cpp crystal cs d dart \
-	elisp elixir elm erlang es6 factor fantom forth fsharp go groovy gnu-smalltalk \
+IMPLS = ada ada.2 apl awk bash basic c chuck clojure coffee common-lisp cpp crystal cs d \
+  dart elisp elixir elm erlang es6 factor fantom forth fsharp go groovy gnu-smalltalk \
 	guile haskell haxe hy io java js julia kotlin livescript logo lua make mal \
 	matlab miniMAL nasm nim objc objpascal ocaml perl perl6 php picolisp plpgsql \
 	plsql powershell ps python r racket rexx rpython ruby rust scala scheme skew \
@@ -177,6 +177,7 @@ scheme_STEP_TO_PROG_foment      = scheme/$($(1)).scm
 # Map of step (e.g. "step8") to executable file for that step
 ada_STEP_TO_PROG =     ada/$($(1))
 ada.2_STEP_TO_PROG =   ada.2/$($(1))
+apl_STEP_TO_PROG =     apl/$($(1)).apl
 awk_STEP_TO_PROG =     awk/$($(1)).awk
 bash_STEP_TO_PROG =    bash/$($(1)).sh
 basic_STEP_TO_PROG =   $(basic_STEP_TO_PROG_$(basic_MODE))
