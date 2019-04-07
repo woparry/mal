@@ -1,5 +1,6 @@
 ∇z←Read
   z←⍞
+  ⎕←z ⍝ Tests expect input to be echoed
 ∇
 
 ∇z←Eval z
@@ -15,7 +16,7 @@
 
 ∇Main
  Next:
- "user> "
+ ⎕←"user> "
  rep
  →(1<2) / Next
 ∇
