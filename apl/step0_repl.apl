@@ -21,6 +21,6 @@
  →(1<2) / Next
 ∇
 
-⎕PW←1000
+⎕PW←1000 ⍝ Set page very wide to avoid line wraps
 Main
 )OFF
