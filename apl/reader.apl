@@ -1,7 +1,8 @@
 )WSID ./reader.xml
 
-∇tokens←Tokenize
- tokens←'test'
+∇tokens ← Tokenize input
+ nocomment ← {(~ ∨\ ';' ⍷ ⍵) / ⍵} input
+ tokens ← nocomment
 ∇
 
 )SAVE
