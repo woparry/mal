@@ -133,7 +133,7 @@ step5_EXCLUDES += $(if $(filter cpp,$(haxe_MODE)),haxe,) # cpp finishes 10,000, 
 
 dist_EXCLUDES += mal
 # TODO: still need to implement dist
-dist_EXCLUDES += guile io julia matlab swift
+dist_EXCLUDES += apl guile io julia matlab swift
 
 
 # Extra options to pass to runtest.py
