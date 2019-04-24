@@ -1,8 +1,12 @@
 )WSID ./reader.xml
 
 ∇tokens ← Tokenize input
- nocomment ← {(~ ∨\ ';' ⍷ ⍵) / ⍵} input
- tokens ← nocomment
+ NoComment ← {(~ ∨\ ';' ⍷ ⍵) / ⍵} input
+ SingleTokens ← '[]{}()''`~^@' {⌈⌿ ⍺ ∘.⍷ ⍵} NoComment
+ WhiteSpace ← ' ,' {⌈⌿ ⍺ ∘.⍷ ⍵} NoComment
+ DoubleTokens ← {¯1↓(0,⍵)+(⍵,0)} '~@' ⍷ NoComment 
+ Quotes ← '"' '\"' {{¯1↓(0,⍵)⌈(⍵,0)} ≠\ +⌿ ⊃ ⍺ ⍷¨ ⍵ ⍵} NoComment
+ tokens ← (1 2 3 4) ⌈.× (SingleTokens DoubleTokens WhiteSpace Quotes)
 ∇
 
 )SAVE
